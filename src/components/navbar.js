@@ -1,5 +1,5 @@
 
-import { Search } from '@material-ui/icons'
+import { Search,Brightness2 } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -10,9 +10,9 @@ const ContainerNav= styled.div`
         top: 0;
         z-index: 1;
         
-        background-color:white ;
+        background-color:${(props) => props.mode === "bright" ? "white" : "black"} ;
         padding:5px;
-       //color: white;
+       color:${(props) => props.mode === "bright" ? "black" : "white"} ;
     `
 const Wrapper=styled.div`
 padding:10px 20px;
@@ -25,7 +25,7 @@ const Left=styled.div`
 flex:1;
 display: flex;
 align-items: center;
-
+justify-content: space-between;
 `
 const Language=styled.div`
 font-size:14px;
@@ -43,6 +43,7 @@ align-items: center;
 const Input=styled.input`
 border: none;
 height: 100%;
+font-size: 12px;
 `
 
 const Center=styled.div`
@@ -71,19 +72,26 @@ cursor:pointer;
 
 export default function Navbar()
 {
-    
+    const[mode,setMode]=React.useState("bright")
+    function handleClick(){
+        setMode(mode==="bright" ? "night": "bright")
+    }
+    console.log(mode)
     return(
         
-            <ContainerNav>
+            <ContainerNav mode={mode}>
                 <Wrapper>
                     <Left>
                         <Language>
                             EN
                         </Language>
+
                         <SearchContainer>
                           <Input></Input>
                           <Search/>
                         </SearchContainer>
+                        <Brightness2 style={{cursor:'pointer'}} onClick={()=>handleClick()}/>
+
                     </Left>
                     <Center>
                         <Brand>Lorem.</Brand>
