@@ -1,10 +1,18 @@
 
+import { Search } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
 
-const Container= styled.div`
-        height:60px;        
+const ContainerNav= styled.div`
+        height:60px; 
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        
+        background-color:white ;
+        padding:5px;
+       //color: white;
     `
 const Wrapper=styled.div`
 padding:10px 20px;
@@ -24,21 +32,27 @@ font-size:14px;
 cursor:pointer;
 
 `
-
-const Input=styled.input`
-border: none;
-`
 const SearchContainer=styled.div`
-border: 0.5px solid black;
+border: 0.5px solid lightgray;
 margin-left:25px;
 padding:5px;
+display: flex;
+align-items: center;
 
 `
+const Input=styled.input`
+border: none;
+height: 100%;
+`
+
 const Center=styled.div`
 flex:2;
+align-items: center;
 
 `
 const Brand=styled.h1`
+padding: 0;
+margin: 0;
 font-weight: 1500;
 `
 
@@ -59,8 +73,8 @@ export default function Navbar()
 {
     
     return(
-        <div>
-            <Container>
+        
+            <ContainerNav>
                 <Wrapper>
                     <Left>
                         <Language>
@@ -68,11 +82,11 @@ export default function Navbar()
                         </Language>
                         <SearchContainer>
                           <Input></Input>
-                          I
+                          <Search/>
                         </SearchContainer>
                     </Left>
                     <Center>
-                        <Brand>zuDio</Brand>
+                        <Brand>Lorem.</Brand>
                     </Center>
                     <Right>
                         <MenuItem>REGISTER</MenuItem>
@@ -80,7 +94,7 @@ export default function Navbar()
 
                     </Right>
                 </Wrapper>
-            </Container>
-        </div>
+            </ContainerNav>
+        
     )
 }
