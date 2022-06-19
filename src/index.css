@@ -9,3 +9,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.category{
+  display: grid;
+  grid: auto / repeat(6, 1fr);
+}
+
+.grid-item{
+  position: relative;
+margin: 3px;
+height: 70vh;
+grid-column: span 2;
+}
+.category .grid-item:nth-child(5n), 
+.category .grid-item:nth-child(5n-1) {
+  grid-column: span 3;
+}

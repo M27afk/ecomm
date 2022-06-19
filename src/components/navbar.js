@@ -1,5 +1,5 @@
 
-import { Search,Brightness2 } from '@material-ui/icons'
+import { Search,Brightness2, ShoppingCart } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -10,7 +10,7 @@ const ContainerNav= styled.div`
         top: 0;
         z-index: 1;
         
-        background-color:${(props) => props.mode === "bright" ? "white" : "black"} ;
+        background-color:#${(props) => props.mode === "bright" ? "ffffff" : "181818"} ;
         padding:5px;
        color:${(props) => props.mode === "bright" ? "black" : "white"} ;
     `
@@ -62,6 +62,7 @@ const Right=styled.div`
 flex:1;
 display: flex;
 justify-content:space-evenly;
+align-items: center;
 `
 const MenuItem=styled.div`
 font-size:14px;
@@ -99,7 +100,7 @@ export default function Navbar()
                     <Right>
                         <MenuItem>REGISTER</MenuItem>
                         <MenuItem>SIGN IN</MenuItem>
-
+                        <ShoppingCart style={{cursor:'pointer'}}x/>
                     </Right>
                 </Wrapper>
             </ContainerNav>
