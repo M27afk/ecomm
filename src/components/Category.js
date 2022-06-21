@@ -12,7 +12,7 @@ export default function Category(){
         <div class="category">
             {
                 categories.map(item =>(
-                    <CategoryItems val={item}></CategoryItems>
+                    <CategoryItems val={item} key={item.id}/>
                 ))
             }
         </div>
