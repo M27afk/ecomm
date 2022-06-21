@@ -40,7 +40,7 @@ align-items: center;
     display: block;
   }
 
-transition: all ease 1s;
+transition: all ease 0.5s;
 `
 
 const Title=styled.h1`letter-spacing:4px;`
