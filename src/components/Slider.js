@@ -85,7 +85,7 @@ export default function Slider()
             setSlide( slide <2 ? slide+1 : 0)
 
         }
-        console.log(slide)
+       
     }
     return(
         <Container>

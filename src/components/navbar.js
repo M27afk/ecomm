@@ -77,8 +77,7 @@ export default function Navbar()
     function handleClick(){
         setMode(mode==="bright" ? "night": "bright")
     }
-    console.log(mode)
-    return(
+       return(
         
             <ContainerNav mode={mode}>
                 <Wrapper>
