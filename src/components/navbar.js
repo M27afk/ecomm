@@ -35,15 +35,20 @@ cursor:pointer;
 const SearchContainer=styled.div`
 border: 0.5px solid lightgray;
 margin-left:25px;
-padding:5px;
 display: flex;
 align-items: center;
-
+justify-content: space-between;
+padding: 2px;
 `
 const Input=styled.input`
+flex: 8;
 border: none;
 height: 100%;
-font-size: 12px;
+font-size: 15px;
+margin: 2px 0;
+padding-left: 5px;
+background-color:#${(props) => props.mode === "bright" ? "ffffff" : "181818"} ;
+       color:${(props) => props.mode === "bright" ? "black" : "white"} ;
 `
 
 const Center=styled.div`
@@ -87,8 +92,8 @@ export default function Navbar()
                         </Language>
 
                         <SearchContainer>
-                          <Input></Input>
-                          <Search/>
+                          <Input mode={mode}/>
+                          <Search style={{cursor:'pointer'}}    />
                         </SearchContainer>
                         <Brightness2 style={{cursor:'pointer'}} onClick={()=>handleClick()}/>
 

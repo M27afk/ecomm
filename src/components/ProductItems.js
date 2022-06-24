@@ -21,6 +21,9 @@ min-width: 280px;
 height: 350px;
 position: relative;
 margin: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
 background-color: #f5fbfd;
     &:hover ${Info}{
         opacity: 1;
@@ -29,9 +32,9 @@ background-color: #f5fbfd;
 `
 
 const Image=styled.img`
-height: 100%;
+height: 90%;
 width: 100%;
-object-fit: cover;
+object-fit:cover;
 `
 
 const Icon=styled.div`
