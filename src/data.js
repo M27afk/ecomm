@@ -100,7 +100,7 @@ export const popularProducts = [
     },
     {
       id:7,
-      img:"https://www.pngarts.com/files/2/Watch-PNG-High-Quality-Image.png",
+      img:"https://www.pngarts.com/files/2/Watch-PNG-Transparent-Image.png",
     },
     {
       id:8,
