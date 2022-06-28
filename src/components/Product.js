@@ -6,7 +6,6 @@ const Container=styled.div`
 margin-top:10px;
 display: flex;
 flex-wrap: wrap;
-
 `
 export default function Product()
 {

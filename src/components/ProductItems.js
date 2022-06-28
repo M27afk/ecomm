@@ -24,7 +24,7 @@ margin: 5px;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: #f5fbfd;
+background-color: #f5fbfd; //#1f2933;
     &:hover ${Info}{
         opacity: 1;
         cursor:pointer;

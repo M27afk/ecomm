@@ -5,6 +5,8 @@ import React from "react";
 import styled from "styled-components";
 const Container=styled.div`
 display: flex;
+//background-color: black;
+//color: white;
 
 `
 const Left=styled.div`
@@ -35,6 +37,10 @@ align-items: center;
 color: white;
 margin: 5px;
 cursor:pointer;
+&:hover{
+    transform: scale(1.2);
+}
+transition: all 0.3s ease;
 `
 const Center=styled.div`
 flex:1;
@@ -57,9 +63,13 @@ flex-wrap: wrap;
 justify-content: center;
 `
 const ListItem=styled.li`
+color: darkgrey;
 cursor: pointer;
 width: 50%;
 margin-bottom: 10px;
+&:hover{
+    color: black;
+}
 `
 const Right=styled.div`
 flex:1;
