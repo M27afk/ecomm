@@ -1,8 +1,8 @@
 
 import { Search,Brightness2, ShoppingCart } from '@material-ui/icons'
-import React from 'react'
-import styled from 'styled-components'
-
+import React from 'react';
+import styled from 'styled-components';
+import {Link } from "react-router-dom";
 
 const ContainerNav= styled.div`
         height:60px; 
@@ -83,7 +83,7 @@ export default function Navbar()
         setMode(mode==="bright" ? "night": "bright")
     }
        return(
-        
+           
             <ContainerNav mode={mode}>
                 <Wrapper>
                     <Left>
@@ -99,15 +99,17 @@ export default function Navbar()
 
                     </Left>
                     <Center>
-                        <Brand>Lorem.</Brand>
+                        <Link style={{textDecoration: 'none',color:'black'}} to="/"><Brand>Lorem.</Brand></Link>
                     </Center>
                     <Right>
-                        <MenuItem>REGISTER</MenuItem>
-                        <MenuItem>SIGN IN</MenuItem>
+                        <Link style={{textDecoration: 'none',color:'black'}} to="/register"><MenuItem>REGISTER</MenuItem></Link>
+                        <Link style={{textDecoration: 'none',color:'black'}} to="/login"><MenuItem>SIGN IN</MenuItem></Link>
                         <ShoppingCart style={{cursor:'pointer'}}x/>
                     </Right>
                 </Wrapper>
             </ContainerNav>
+            
+           
         
     )
 }

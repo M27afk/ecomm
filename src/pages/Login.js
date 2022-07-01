@@ -55,7 +55,7 @@ cursor: pointer;
 `
 
 
-export default function Register () { return( 
+export default function Login () { return( 
     <Container>
         <Wrapper>
             <Title>
