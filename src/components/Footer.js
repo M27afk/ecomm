@@ -1,13 +1,13 @@
 import {Email, GitHub, LocationCity, PhoneAndroid, Twitter, WhatsApp } from "@material-ui/icons";
 import Link from '@material-ui/core/Link';
-
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../resp";
 const Container=styled.div`
 display: flex;
 //background-color: black;
 //color: white;
-
+${mobile({flexDirection:"column"})}
 `
 const Left=styled.div`
 flex:1;
@@ -47,7 +47,7 @@ flex:1;
 display: flex;
 flex-direction: column;
 justify-content: center;
-
+${mobile({display:"none"})}
 
 `
 const Title=styled.h3`

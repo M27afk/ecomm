@@ -5,6 +5,7 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { mobile } from "../resp";
 
 const Container = styled.div`
 
@@ -14,6 +15,7 @@ const Wrapper = styled.div`
 display: flex;
 justify-content: center;
 padding: 50px;
+${mobile({flexDirection:"column"})}
 `
 const ImgContainer = styled.div`
 flex: 1;
@@ -22,6 +24,8 @@ const Image = styled.img`
 width: 100%;
 object-fit:cover;
 height: 90vh;
+${mobile({height:"40vh"})}
+
 `
 const Info = styled.div`
 flex:1;
@@ -48,6 +52,8 @@ margin: 30px 0;
 display: flex;
 justify-content: space-between;
 align-items:center;
+${mobile({width:"100%"})}
+
 `
 const Filter = styled.div`
 display: flex;
@@ -79,6 +85,9 @@ width: 50%;
 display: flex;
 justify-content: space-between  ;
 align-items: center;
+${mobile({width:"100%"})}
+
+
 `
 const AmountContainer = styled.div`
 display: flex;
@@ -112,7 +121,7 @@ color: white;
 export default function ProductPage() {
     return (
         <Container>
-            <Navbar />
+            
             <Announcement />
             <Wrapper>
                 <ImgContainer>

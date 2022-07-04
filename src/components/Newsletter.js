@@ -1,7 +1,7 @@
 import { SendRounded } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-
+import { mobile } from "../resp";
 const Container= styled.div`
 height: 60vh;
 background-color: #fcf5f5;
@@ -14,11 +14,14 @@ align-items: center;
 const Title= styled.h1`
 font-size: 70px;
 margin-bottom: 20px;
+${mobile({fontSize:"45px",margin:"20px 0 0 0"})}
 `
 
 const Desc= styled.h6`
 font-size: 25px;
 font-weight: 300;
+${mobile({fontSize:"20px",margin:"10px"})}
+
 `
 
 const InputContainer= styled.div`
@@ -27,6 +30,7 @@ height: 40px;
 display: flex;
 justify-content: space-between;
 margin-bottom: 40px;
+${mobile({justifyContent:"center"})}
 `
 
 const InputField= styled.input`

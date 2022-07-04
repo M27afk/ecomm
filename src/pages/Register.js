@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../resp";
 
 const Container=styled.div`
 height: 100vh;
@@ -17,6 +18,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+${mobile({width:"75%"})}
 `
 const Title=styled.h1`
 font-size: 30px;
@@ -46,7 +48,7 @@ const Agreement=styled.p`
 
 `
 const Button=styled.button`
-padding: 5px;
+padding: 10px 20px;
 cursor: pointer;
 `
 

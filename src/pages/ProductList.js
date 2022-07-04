@@ -5,29 +5,34 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Product from "../components/Product";
-
+import { mobile } from "../resp";
 const Container=styled.div``
-const Title=styled.h1`margin: 20px; 
+const Title=styled.h1`margin: 20px;
+${mobile({margin:"10px"})}
+
 `
 const FilterContainer=styled.div`
 display: flex;
 justify-content:space-between;
 `
 const Filter=styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
+
 margin: 20px; 
+${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
 `
+
 const FilterText=styled.div`
 font-size: 20px;
 font-weight: 600;
 margin: 10px;
+${mobile({marginRight:"0px"})}
+
 `
 const Select=styled.select`
 padding: 5px;
 margin:5px;
 cursor: pointer;
+${mobile({ margin: "10px 0px" })}
 `
 const Option=styled.option`
 cursor: pointer;
@@ -36,7 +41,7 @@ cursor: pointer;
 export default function ProductList () { 
     return(
         <Container>
-        <Navbar/>
+        
         <Announcement/>
        <Title>
             Dresses

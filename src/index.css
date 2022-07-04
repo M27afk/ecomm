@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Urbanist', sans-serif;
-  
+padding: 0;  
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,4 +26,22 @@ grid-column: span 2;
 .category .grid-item:nth-child(5n), 
 .category .grid-item:nth-child(5n-1) {
   grid-column: span 3;
+}
+@media only screen and (max-width:480px)
+{.category{
+  display: grid;
+  
+  grid: auto /auto;
+}
+  .grid-item{
+    position: relative;
+  margin: 3px;
+  height: 40vh;
+  grid-column: span 1;
+
+  }
+  .category .grid-item:nth-child(5n), 
+.category .grid-item:nth-child(5n-1) {
+  grid-column: span 1;
+}
 }

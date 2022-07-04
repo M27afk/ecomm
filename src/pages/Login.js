@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { mobile } from "../resp";
 const Container=styled.div`
 height: 100vh;
 width: 100vw;
@@ -17,14 +17,17 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+${mobile({width:"75%"})}
+
 `
 const Title=styled.h1`
 font-size: 30px;
-margin: 10px;
+margin: 15px;
 `
 const Form=styled.form`
 display: flex;
 flex-wrap: wrap;
+margin: 5px;
 `
 const Input=styled.input`
 flex: 1;
@@ -50,8 +53,9 @@ cursor: pointer;
 `
 const Button=styled.button`
 margin: 5px;
-padding: 5px;
+padding: 10px 20px;
 cursor: pointer;
+
 `
 
 

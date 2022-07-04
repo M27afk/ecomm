@@ -4,13 +4,15 @@ import {ArrowRightOutlined} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { slideItems } from "../data";
-
+import { mobile } from "../resp";
 const Container = styled.div`
 height: 100vh;
 width: 100%;
 display: flex;
 position:relative;
 overflow:hidden;
+
+${mobile({display:"none"})}
 `
 const Arrow=styled.div`
 height: 50px;
