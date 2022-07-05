@@ -9,14 +9,15 @@ import ProductPage from './pages/ProductPage'
 export default function App()
 {
  return(
-    <ProductPage/>
- )
-}
-
-/*<BrowserRouter>
+   <BrowserRouter>
     <Routes>
     <Route path="/" element={< Home />} />
     <Route path="/register" element={< Register />} />
     <Route path="/login" element={< Login />} />
+    <Route path="/productpage" element={< ProductPage/>} />
     </Routes>
-    </BrowserRouter>*/
+    </BrowserRouter>
+ )
+}
+
+/**/

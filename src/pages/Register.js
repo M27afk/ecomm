@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../resp";
+import {Link } from "react-router-dom";
+
 
 const Container=styled.div`
 height: 100vh;
@@ -47,6 +49,17 @@ border: 1px solid lightgray;
 const Agreement=styled.p`
 
 `
+const Query=styled.div`
+display: flex;
+`
+const ButtonHome=styled.button`
+margin: 5px;
+padding: 10px 20px;
+cursor: pointer;
+background: transparent;
+border: none;
+
+`
 const Button=styled.button`
 padding: 10px 20px;
 cursor: pointer;
@@ -69,7 +82,10 @@ export default function Register () { return(
 
             </Form>
             <Agreement>By creating an account, I adhere to <b>Privacy Policy</b> of the company</Agreement>
-            <Button>SIGN UP</Button>
+            <Query>
+            <Link style={{textDecoration: 'none',color:'black'}} to="/"><ButtonHome>Home</ButtonHome></Link>
+            <Button>LOG IN</Button>
+            </Query>
         </Wrapper>
 
     </Container>

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../resp";
+import {Link } from "react-router-dom";
+
 const Container=styled.div`
 height: 100vh;
 width: 100vw;
@@ -46,10 +48,22 @@ border: 1px solid lightgray;
 }
 
 `
-const Link=styled.a`
+const LinkNav=styled.a`
 margin: 5px 0;
 text-decoration:underline;
 cursor: pointer;
+`
+
+const Query=styled.div`
+display: flex;
+`
+const ButtonHome=styled.button`
+margin: 5px;
+padding: 10px 20px;
+cursor: pointer;
+background: transparent;
+border: none;
+
 `
 const Button=styled.button`
 margin: 5px;
@@ -69,9 +83,12 @@ export default function Login () { return(
                 <Input placeholder="Username"/>
                 <Input placeholder="Password" type="password"/>
             </Form>
-            <Link>Forgot Username?</Link>
-            <Link>Forgot Password?</Link>
+            <LinkNav>Forgot Username?</LinkNav>
+            <LinkNav>Forgot Password?</LinkNav>
+            <Query>
+            <Link style={{textDecoration: 'none',color:'black'}} to="/"><ButtonHome>Home</ButtonHome></Link>
             <Button>LOG IN</Button>
+            </Query>
         </Wrapper>
 
     </Container>

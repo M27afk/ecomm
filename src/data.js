@@ -3,21 +3,21 @@ export const slideItems=[
         id:1,
         img:"https://freesvg.org/img/Fashion-Woman-3.png",
         title:"SUMMER SALE",
-        desc:"buy now pls pls",
+        desc:"Beat the heat in style!",
         bg:"f5fafd"
     },
     {
         id:2,
         img:"https://freesvg.org/img/Fashion-Woman-3.png",
         title:"WINTER SALE",
-        desc:"buy now pls pls",
+        desc:"Update your collection at warm discounts!",
         bg:"fcf1ed"
     },
     {
         id:3,
         img:"https://freesvg.org/img/Fashion-Woman-3.png",
         title:"AUTUMN SALE",
-        desc:"buy now pls pls",
+        desc:"Fresh collections in your way",
         bg:"f5fafd"
     }
 ]
@@ -26,7 +26,7 @@ export const categories=[
     {
         id:1,
         img:"https://images.pexels.com/photos/7451202/pexels-photo-7451202.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title:"SHIRT STYLE",
+        title:"SHIRTS",
 
     },
     {

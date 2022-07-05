@@ -34,7 +34,10 @@ flex:1;
 
 const Title = styled.h1`font-weight: 200;
 `
-const Desc = styled.p`margin: 20px 0px;`
+const Desc = styled.p`
+margin: 20px 0px;
+${mobile({margin:"0px"})}
+`
 const Price = styled.span`
 font-size: 40px;
 font-weight: 100;
@@ -121,7 +124,7 @@ color: white;
 export default function ProductPage() {
     return (
         <Container>
-            
+            <Navbar/>
             <Announcement />
             <Wrapper>
                 <ImgContainer>
@@ -132,7 +135,7 @@ export default function ProductPage() {
                         Titon Classic Collection - MG5000
                     </Title>
                     <Desc>
-                        lorem ipsum ancicniernoircneoinrconcdncksjcnkjscndksdncsknc dckndc cuec ercnoeirc  ciducnoerc ecn rcoi dcic i  eee sa;a cuo nm,dca  ee sala up namde
+                        lorem ipsum ancicni dckndc cuec ercnoeirc  ciducnoerc ecn rcoi dcic i  eee sa;a cuo nm,dca  ee sala up namde
                     </Desc>
                     <Price>₹3499</Price>
                     <Price1>₹4199</Price1>

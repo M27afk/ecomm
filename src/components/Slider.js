@@ -104,7 +104,7 @@ export default function Slider()
                     </ImgCont>
                     <InfoCont>
                         <Title>{items.title}</Title>
-                        <Desc>Buy now please please</Desc>
+                        <Desc>{items.desc}  </Desc>
                         <Button>SHOP NOW</Button>
                     </InfoCont>
                     </Slide>

@@ -1,5 +1,5 @@
 
-import { Search,Brightness2, ShoppingCart } from '@material-ui/icons'
+import { Search, ShoppingCart } from '@material-ui/icons'
 import React from 'react';
 import styled from 'styled-components';
 import {Link } from "react-router-dom";
@@ -9,9 +9,9 @@ const ContainerNav= styled.div`
         position: sticky;
         top: 0;
         z-index: 2;
-        background-color:#${(props) => props.mode === "bright" ? "ffffff" : "181818"} ;
+        background-color:#ffffff;
       
-       color:${(props) => props.mode === "bright" ? "black" : "white"} ;
+       color:black;
 
        ${mobile({height:"50px"})}
     `
@@ -42,7 +42,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 2px;
-
+${mobile({marginLeft:"10px"})}
 `
 const Input=styled.input`
 flex: 8;
@@ -51,8 +51,8 @@ height: 100%;
 font-size: 15px;
 margin: 2px 0;
 padding-left: 5px;
-background-color:#${(props) => props.mode === "bright" ? "ffffff" : "181818"} ;
-       color:${(props) => props.mode === "bright" ? "black" : "white"} ;
+background-color:#ffffff;
+       color:black;
        ${mobile({width:"50px"})}
 `
 
@@ -65,7 +65,7 @@ const Brand=styled.h1`
 padding: 0;
 margin: 0;
 font-weight: 1500;
-${mobile({fontSize:"24px"})}
+${mobile({fontSize:"24px",margin:"5px"})}
 `
 
 
@@ -79,19 +79,15 @@ ${mobile({flex:2,justifyContent:"center"})}
 const MenuItem=styled.div`
 font-size:14px;
 cursor:pointer;
-${mobile({fontSize:"12px",marginLeft:"2px"})}
+${mobile({fontSize:"12px",margin:"2px"})}
 `
 
 
 export default function Navbar()
 {
-    const[mode,setMode]=React.useState("bright")
-    function handleClick(){
-        setMode(mode==="bright" ? "night": "bright")
-    }
        return(
            
-            <ContainerNav mode={mode}>
+            <ContainerNav>
                 <Wrapper>
                     <Left>
                         <Language>
@@ -99,20 +95,21 @@ export default function Navbar()
                         </Language>
 
                         <SearchContainer>
-                          <Input mode={mode}/>
+                          <Input placeholder="Search.." />
                           <Search style={{cursor:'pointer'}}    />
                         </SearchContainer>
-                        <Brightness2 style={{cursor:'pointer'}} onClick={()=>handleClick()}/>
-
+                        
                     </Left>
                     <Center>
                         <Link style={{textDecoration: 'none',color:'black'}} to="/"><Brand>Lorem.</Brand></Link>
                     </Center>
-                    <Right>
+                   <Right>
                         <Link style={{textDecoration: 'none',color:'black'}} to="/register"><MenuItem>REGISTER</MenuItem></Link>
                         <Link style={{textDecoration: 'none',color:'black'}} to="/login"><MenuItem>SIGN IN</MenuItem></Link>
+                        <Link style={{textDecoration: 'none',color:'black'}} to="/productpage"><MenuItem>PRODUCT PAGE</MenuItem></Link>
                         <ShoppingCart style={{cursor:'pointer'}}x/>
                     </Right>
+                    
                 </Wrapper>
             </ContainerNav>
             
